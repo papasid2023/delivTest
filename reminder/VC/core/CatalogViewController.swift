@@ -24,7 +24,9 @@ class CatalogViewController: UIViewController, UITableViewDelegate, UITableViewD
         title = "Choose your meal"
         setupTableView()
         setupUI()
+        fetchPreOrderData()
         fetchAllProductsData()
+        
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(didReceiveNewPreOrderNotification),
                                                name: .didCreateNewPreOrder, object: nil)
